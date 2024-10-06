@@ -109,6 +109,7 @@ body {
   padding: 0;
   border: none;
   border-color: transparent;
+  background-color: transparent;
 }
 .burger-button-icon {
   display: block;
@@ -116,6 +117,13 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .page-header {
+    padding: 0 16px;
+    width: 100%;
+  }
+  .container.header-container {
+    max-width: 736px;
+  }
   .burger-button {
     display: none;
   }
@@ -131,6 +139,7 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
+    margin-right: 120px;
   }
 
   .menu-link {
@@ -187,13 +196,21 @@ body {
   }
 }
 @media screen and (min-width: 1158px) {
+  .page-header {
+    padding: 0 15px;
+  }
+  .container.header-container {
+    max-width: 1158px;
+  }
   .header-logo {
     margin-right: 76px;
   }
+
   .menu-contacts {
     flex-direction: row;
     align-items: center;
     gap: 40px;
+    margin-left: auto;
   }
   .menu-contacts-link {
     font-size: 16px;
@@ -210,10 +227,11 @@ body {
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
+  padding: 72px 24px 40px 24px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -225,10 +243,14 @@ body {
   visibility: visible;
   pointer-events: auto;
 }
-.mobile-menu-container {
+.container .mobile-menu-container {
+  width: 100%;
   position: relative;
-  padding-top: 72px;
-  padding-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.mobile-menu-container {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -359,7 +381,6 @@ body {
   padding: 72px 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 96px;
 }
 .order-service-button {
   font-family: "Roboto", sans-serif;
@@ -394,12 +415,6 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
-  .main-title {
-    font-size: 56px;
-    line-height: 1.11;
-    max-width: 496px;
-    margin-bottom: 48px;
-  }
   .hero-section {
     min-width: 768px;
     background-color: #2e2f42;
@@ -413,7 +428,13 @@ body {
     background-size: cover;
     background-position: center;
     padding: 112px 0;
-    margin-bottom: 96px;
+  }
+  .main-title {
+    font-size: 56px;
+    line-height: 1.11;
+    max-width: 496px;
+    margin: auto;
+    margin-bottom: 48px;
   }
 }
 @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
@@ -427,11 +448,6 @@ body {
   }
 }
 @media screen and (min-width: 1158px) {
-  .main-title {
-    line-height: 1.07;
-    letter-spacing: 0.02em;
-    margin-bottom: 48px;
-  }
   .hero-section {
     max-width: 1440px;
     background-color: #2e2f42;
@@ -442,6 +458,17 @@ body {
       ),
       url(../images/bg-desktop.jpg);
     padding: 188px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-container {
+    max-width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-title {
+    line-height: 1.07;
+    letter-spacing: 0.02em;
     margin-bottom: 48px;
   }
   @media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
@@ -459,7 +486,9 @@ body {
 
 /*===============Benefites section===============*/
 .benefites-section {
-  margin-bottom: 96px 0;
+  padding: 96px 16px;
+}
+.container {
   max-width: 288px;
 }
 .benefites-list {
@@ -489,10 +518,11 @@ body {
 }
 @media screen and (min-width: 768px) {
   .benefites-section {
-    padding: 96px 0;
+    padding: 96px 16px;
+    width: 100%;
+  }
+  .container.benefites-container {
     max-width: 736px;
-    margin: 0;
-    padding: 0;
   }
   .benefites-list {
     gap: 72px 24px;
@@ -515,12 +545,19 @@ body {
 }
 @media screen and (min-width: 1158px) {
   .benefites-section {
-    max-width: 1128px;
+    max-width: 1440px;
     padding: 120px 0;
   }
+  .container.benefites-container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+
   .benefites-list {
     display: flex;
-    width: 1128px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     gap: 24px;
   }
   .benefites-list-item {
@@ -553,13 +590,12 @@ body {
 /*===============Our Team===============*/
 .team-section {
   background-color: #f4f4fd;
-  padding: 96px 0;
-  max-width: 320px;
-  padding: 96px 28px;
+  padding: 96px 16px;
 }
 .container {
   max-width: 264px;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .section-title {
@@ -622,7 +658,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 8px;
-  padding-bottom: 32px;
 }
 .social-nets {
   display: flex;
@@ -646,13 +681,11 @@ body {
 }
 @media screen and (min-width: 768px) {
   .team-section {
-    padding-left: 108px;
-    padding-right: 108px;
-    max-width: 768px;
+    padding: 96px 108px;
+    width: 100%;
   }
-  .container {
+  .container.team-container {
     max-width: 552px;
-    padding: 0;
   }
   .team-list {
     display: flex;
@@ -670,10 +703,11 @@ body {
     max-width: 1440px;
     padding: 120px 0;
   }
-  .container {
+  .container.team-container {
     max-width: 1158px;
     padding: 0 15px;
   }
+
   .team-list {
     max-width: 1158px;
     gap: 24px;
@@ -687,9 +721,10 @@ body {
 /*===============Portfolio===============*/
 .portfolio-section {
   text-transform: capitalize;
-  padding: 96px 0;
+  padding: 96px 16px;
+}
+.container .portfolio-container {
   max-width: 288px;
-  margin: 0 16px;
 }
 .section-title {
   font-weight: 700;
@@ -704,7 +739,8 @@ body {
 .portfolio-list {
   display: flex;
   flex-direction: column;
-  max-width: 288px;
+  justify-content: center;
+  align-items: center;
   gap: 48px;
 }
 .portfolio-list-item {
@@ -752,6 +788,10 @@ body {
 }
 @media screen and (min-width: 768px) {
   .portfolio-section {
+    width: 100%;
+    padding: 96px 16px;
+  }
+  .container.portfolio-container {
     max-width: 736px;
   }
   .portfolio-list {
@@ -775,7 +815,10 @@ body {
 @media screen and (min-width: 1158px) {
   .portfolio-section {
     padding: 120px 0;
-    max-width: 1128px;
+    max-width: 1440px;
+  }
+  .container.portfolio-container {
+    max-width: 1158px;
   }
   .portfolio-list {
     max-width: 1128px;
@@ -829,17 +872,20 @@ body {
 
 /*===============Footer===============*/
 .page-footer {
-  max-width: 320px;
   background: #2e2f42;
   padding: 96px 16px;
+}
+.container .footer-container {
+  max-width: 288px;
+  margin: 0;
 }
 .footer-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 72px;
-  margin: 0;
 }
 .page-logo {
   font-family: "Raleway", sans-serif;
@@ -968,14 +1014,17 @@ body {
 }
 @media screen and (min-width: 768px) {
   .page-footer {
-    max-width: 768px;
+    padding: 96px 108px;
+    width: 100%;
   }
-  .footer-container {
+  .container.footer-container {
     flex-direction: row;
-    max-width: 768px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 554px;
     gap: 72px 24px;
-    padding: 0 108px;
   }
+
   .footer-logo,
   .footer-social-media-text {
     justify-content: flex-start;
@@ -986,15 +1035,21 @@ body {
     width: 453px;
   }
   .footer-text,
-  .form-input,
-  .mailing-list {
+  .form-input {
     width: 264px;
+  }
+  .form-input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .footer-social-media {
     height: 110px;
     align-items: baseline;
   }
   .mailing-list {
+    display: flex;
+    justify-content: left;
     width: 453px;
     height: 80px;
   }
@@ -1010,13 +1065,17 @@ body {
 @media screen and (min-width: 1158px) {
   .page-footer {
     max-width: 1440px;
+    padding: 100px 0;
   }
-  .footer-container {
+  .container.footer-container {
     max-width: 1158px;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
     padding: 0 15px;
+    margin: 0;
     gap: 0;
   }
   .footer-logo {
