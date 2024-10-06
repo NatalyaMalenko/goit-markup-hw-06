@@ -545,7 +545,6 @@ body {
 }
 @media screen and (min-width: 1158px) {
   .benefites-section {
-    max-width: 1440px;
     padding: 120px 0;
   }
   .container.benefites-container {
@@ -700,7 +699,6 @@ body {
 }
 @media screen and (min-width: 1158px) {
   .team-section {
-    max-width: 1440px;
     padding: 120px 0;
   }
   .container.team-container {
@@ -815,7 +813,6 @@ body {
 @media screen and (min-width: 1158px) {
   .portfolio-section {
     padding: 120px 0;
-    max-width: 1440px;
   }
   .container.portfolio-container {
     max-width: 1158px;
@@ -1064,11 +1061,10 @@ body {
 }
 @media screen and (min-width: 1158px) {
   .page-footer {
-    max-width: 1440px;
     padding: 100px 0;
   }
   .container.footer-container {
-    max-width: 1158px;
+    max-width: 1128px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
